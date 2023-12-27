@@ -31,6 +31,7 @@ zle -N history-search-multi-word-pforwards history-search-multi-word
 [[ ${+termcap[Co]} = 1 && ${termcap[Co]} = 256 ]] && {
   zstyle -s ":history-search-multi-word" highlight-color tmp || \
     zstyle ":history-search-multi-word" highlight-color "bg=17"
+  unset tmp
   typeset -gA HSMW_HIGHLIGHT_STYLES
   [[ ${HSMW_HIGHLIGHT_STYLES[variable]} = none ]] && \
     HSMW_HIGHLIGHT_STYLES[variable]="fg=112"
